@@ -1,0 +1,365 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* GLOBALES */
+h1,
+h2,
+h3 {
+    font-weight: 900;
+
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* HEADER */
+div.header {
+    max-width: 200rem;
+    background: linear-gradient(rgb(0, 0, 0), rgba(94, 255, 0, 0.867), rgb(0, 0, 0));
+    padding: 3rem;
+}
+
+.tech {
+    color: transparent;
+    background: linear-gradient(to right, #02006d 5%, #0057da 50%, #000000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 6rem;
+    margin: 0;
+}
+
+.sonido {
+    font-size: 2rem;
+    color: #ffff;
+}
+
+.text-header {
+    color: #ffff;
+    font-size: 1.5rem;
+}
+
+.precio {
+    color: #ffff;
+    font-size: 2rem;
+}
+
+.precio span {
+    font-size: 5rem;
+}
+
+.texto-header {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.texto-header p {
+    margin: 0;
+}
+
+
+
+/* ESPECIFICACIONES */
+div.carta {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.carta img {
+    width: 5rem;
+    margin: 0 auto;
+}
+
+.carta h3 {
+    color: #0057da;
+    text-transform: uppercase;
+    margin-top: calc(5rem / 2);
+}
+
+
+
+
+/* SOBRE*/
+div.contenedor-sobre {
+    max-width: 120rem;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #ffff;
+}
+
+div.texto-sobre {
+    background-color: #1073BA;
+}
+
+.texto-sobre h2 {
+    font-size: 5rem;
+}
+
+.texto-sobre p {
+    font-size: 2.5rem;
+}
+
+
+
+/* MEDIA TABLET */
+@media (min-width:768px) {
+
+    /* HEADER */
+    .header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ESPECIFICACIONES */
+    .especificaciones {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem 0;
+    }
+
+    .carta {
+        max-width: 20rem;
+        border: 1px solid rgb(151, 151, 151);
+        border-radius: 5rem;
+        box-shadow: 0px 7px 5px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    /* SOBRE*/
+    div.contenedor-sobre {
+        padding: 5rem 0;
+    }
+
+    .texto-sobre h2 {
+        font-size: 7rem;
+    }
+
+    .texto-sobre p {
+        font-size: 3rem;
+    }
+}
+/* ELIGE */
+div.elige{
+    max-width: 100rem;
+    margin: auto;
+    padding: 2rem;
+}
+div.elige h2{
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(to right, #02006d 5%, #0057da 50%, #000000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 5rem;
+    margin: 0;
+}
+div.contenedor-modelo{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2rem;
+    
+}
+.modelo{
+    border-radius: 2rem;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    padding-left: 4rem;
+    color: #0057da;
+    border-radius: 2rem;
+    min-height: 20rem;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition-property: transform background-size;
+    transition-duration: .3s;
+    
+}
+.modelo:hover {
+    transform: scale(1.0);
+    background-size: 30rem;
+}
+
+.modelo h3{
+    font-size: 2.4rem;
+}
+.modelo p{
+    font-size: 5rem;
+}
+.modelo-x {
+    background-image: url(../img/modelo-x.svg);
+}
+.modelo-y {
+    background-image: url(../img/modelo-y.svg);
+}
+
+.modelo-z {
+    background-image: url(../img/modelo-z.svg);
+    background-color: #0057da;
+    color: #ffff;
+}
+/* RECIBE */
+div.texto-recibe{
+    text-align: center;
+    padding: 2rem;
+}
+.email{
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 2rem;
+    position: relative;
+}
+div.div-btn{
+    padding: 2rem;
+}
+.btn {
+    width: 30rem;
+    height: 5rem;
+    border-radius: 2rem;
+    background-color: #0057da;
+    color: #ffff;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: linear-gradient(to right, #0057da 0%, #000000 100% );
+}
+
+/* FOOTER */
+.footer p{
+    color: #0057da;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.footer{
+    text-align: center;
+}
+
+
+/* MEDIA LAPTOP */
+@media (min-width:1200px) {
+
+    /* HEADER */
+    .tech {
+        font-size: 10rem;
+    }
+
+    .sonido {
+        font-size: 5rem;
+    }
+
+    .text-header {
+        font-size: 2rem;
+    }
+
+    .precio {
+        font-size: 3rem;
+    }
+
+    .precio span {
+        font-size: 7rem;
+    }
+
+    /* ESPECIFICACIONES */
+    .especificaciones {
+        max-width: 200rem;
+        margin: auto;
+        display: flex;
+        gap: 2rem;
+        padding: 5rem 2rem;
+    }
+
+    .carta {
+        max-width: 38rem;
+        border: 2px solid rgb(151, 151, 151);
+        border-radius: 5rem;
+        box-shadow: 0px 7px 5px 3px rgba(0, 0, 0, 0.75);
+        margin: auto;
+    }
+     /* SOBRE*/
+     div.contenedor-sobre {
+        flex-direction: row-reverse;
+        max-width: 200rem;
+    }
+    div.texto-sobre{
+        display: flex;
+        flex-direction: column;
+    }
+    .texto-sobre h2 {
+        font-size: 5rem;
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .texto-sobre p {
+        font-size: 2rem;
+        padding:0 2rem ;
+        text-align: left;
+    }
+    /* ELIGE */
+    div.elige{
+        max-width: 150rem;
+    }
+    div.contenedor-modelo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .modelo-y{
+        grid-column: 1/2;
+        grid-row: 2/2;
+    }
+    .modelo-z{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        background-size: 25rem;
+    }
+    .modelo-z h3{
+        font-size: 4rem;
+    }
+    /* RECIBE */
+    div.recibe{
+        display: flex;
+        
+    }
+    .texto-recibe{
+        width: 50%;
+        margin: auto;
+    }
+    
+}

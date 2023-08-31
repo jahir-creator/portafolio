@@ -1,0 +1,554 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* GLOBALES */
+h1,
+h2,
+h3 {
+    font-weight: 900;
+
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+/* HEADER */
+div.header-contenedor {
+    max-width: 200rem;
+    padding: 3rem;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem 0;
+
+}
+
+.link-uno,
+.link-dos {
+    color: #111111;
+    font-size: 2.5rem;
+}
+
+.link-tres {
+    background: #e22331;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.link-tres:hover {
+    background: #e8505b;
+}
+/* BUSCAR */
+.buscar{
+    max-width: 35rem;
+    margin: auto;
+}
+.buscar-card{
+    background-color: #e22331;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.buscar-card h2{
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.buscar-card label{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 2rem;
+}
+.buscar-card input{
+    border-radius: 2rem;
+    height: 4rem;
+}
+.buscar-formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.buscar-link{
+    background: #303f46;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+.buscar-link:hover{
+    background: #455a64;
+}
+.buscar-imagen{
+    padding: 5rem 0;
+}
+.formulario-imagen{
+    width: 30rem;
+}
+
+/* FUNCIONA */
+.funciona-contenedor{
+    background-color: #e8505b;
+    text-align: center;
+}
+.funciona-wave{
+    margin-bottom: -4rem;
+}
+.funciona-contenedor h2{
+    color: #FFFFFF;
+    font-size: 4rem;
+}
+.funciona-contenedor span{
+    font-size: 1.8rem;
+    display: block;
+}
+.funciona-card img:hover{
+    transform: rotate(-5deg);
+    transition: 300ms;
+}
+
+/* TESTIMONIALES */
+.testimoniales{
+    width: 95%;
+    max-width: 1200rem;
+    margin: auto;
+}
+.testimoniales-contenedor{
+    display: block;
+    padding: 5rem 0;
+    text-align: center;
+}
+.testimonial-card{
+    background-color: #455a64;
+    color: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+.card-header{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.card-imagen{
+    flex-basis: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card-testigo p{
+    font-weight: bold;
+    margin: 0.5rem 0
+}
+.testigo-texto{
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 2rem 0 0 0;
+    padding-left: 3rem;
+    position: relative;
+}
+blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+.testigo-texto::before {
+    content: ' " ';
+    font-size: 10rem;
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    opacity: 0.2;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+/* RESTURANTES */
+.restaurantes-contenedor{
+    background-color: #eceeef;
+    padding: 5rem 0;
+}
+.restaurantes-contenedor h2{
+    text-align: center;
+}
+.restaurante-card{
+    width: 90%;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 2.6rem -0.8rem #99a4a9;
+    border-radius: 1rem
+}
+.restaurante-imagen{
+    max-width: 20rem;
+    margin: 0 auto 2rem auto;
+}
+.restaurante-contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* GANA */
+.gana{
+    padding: 5rem 0;
+}
+.gana-contenedor{
+    gap: 2rem;
+}
+.gana-contenedor h2{
+    text-align: center;
+}
+.gana-grid{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+.gana-contenido{
+    padding: 2rem ;
+}
+.gana-contenido p{
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+.gana-contenido a{
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #e22331;
+    border-radius: 2rem ;
+    font-size: 2rem;
+    display: block;
+    height: 5rem;
+    padding: 1rem;
+    transition: background-color 1.3s ease;
+}
+.gana-contenedor a:hover{
+    background: #e8505b;
+}
+/* DESCARGA */
+.descarga{
+    background-color: #eceeef;
+    padding: 5rem 0;
+    display: block;
+}
+.descarga-contenedor{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.descarga-imagen{
+    width: 50%;
+    margin: 5rem auto 0 auto;
+}
+.descarga-imagen img:hover{
+    transform: rotate(5deg) scale(1.2);
+    transition: 500ms;
+}
+.descarga-tienda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descarga-tienda h3{
+    color: #455a64;
+    margin: 1rem 0 0 0;
+     font-size: 4rem;
+}
+.descarga-tienda p{
+    display: block;
+    margin: 1rem;
+    font-size: 2rem;
+}
+.descargar-tienda{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.descargar-tienda a:hover{
+    transform: rotate(5deg);
+    transition: 500ms;
+}
+/* FOOTER */
+footer{
+    background-color: #455a64;
+    padding-top: 5rem;
+}
+.contenedor-footer{
+    max-width: 95%;
+    margin: auto;
+    color: #FFFFFF;
+    text-align: center;
+}
+.contenedor-footer h2{
+    text-align: center;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+}
+.footer-nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 1rem 0;
+}
+.footer-copyright{
+    background-color: #e8505b;
+    margin: 0;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* MEDIA TABLET */
+@media (min-width:768px) {
+
+    /* HEADER */
+    .link-tres {
+        width: 80%;
+    }
+    /* BUSCAR */
+    .buscar{
+        max-width: 90rem;
+        margin: auto;
+    }
+    .buscar-card{
+        width: 70rem;
+        margin: auto;
+    }
+    .buscar-card h2{
+        font-size: 4rem;
+    }
+   
+    .buscar-boton{
+        padding: 2rem 0;
+        width: 50rem;
+        margin: auto;
+    }
+    .buscar-imagen{
+        width: 50rem;
+        margin: auto;
+    }
+    .formulario-imagen{
+        width: 50rem;
+    }
+    /* FUNCIONA */
+    .funciona-wave{
+        margin-bottom: -6rem;
+    }
+    .funciona-contenedor h2{
+        font-size: 7rem;
+    }
+    .funciona-contenedor span{
+        font-size: 3rem;
+        display: block;
+    }
+    /* TESTIMONIALES */
+    .card-testigo p{
+        font-size: 3rem;
+        padding: 0 2rem;
+    }
+    .testigo-calificacion{
+        width: 20rem;
+    }
+    /* RESTAURANTE */
+    .restaurante-imagen{
+        max-width: 40rem;
+        margin: 0 auto 2rem auto;
+    }
+}
+
+/* MEDIA LAPTOP */
+@media (min-width:1200px) {
+
+    /* HEADER */
+    .header-contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-logo {
+        width: 50%;
+    }
+
+    .header-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .link-uno,
+    .link-dos {
+        font-size: 2rem;
+    }
+
+    .link-tres {
+        background: #e22331;
+        width: 40%;
+    }
+    /* BUSCAR */
+    .buscar{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 90%;
+        margin: auto;
+        gap: 3rem;
+    }
+    .buscar-formulario{
+        width: 60rem;
+        margin: auto;
+        gap: 1rem;
+        padding: 4rem;
+    }
+    .buscar-card h2{
+        font-size: 4rem;
+    }
+    .buscar-titulo{
+        width: 70rem;
+        margin: auto;
+    }
+    
+    /* FUNCIONA */
+    .funciona-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* TESTIMONIALES */
+    .testimoniales-grid{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 2rem;
+    }
+    .testimonial-card:nth-child(1){
+        grid-column: 1/4;
+    }
+    
+    .testimonial-card:nth-child(3) {
+        grid-column: 5/6;
+        grid-row: 1/3;
+    }
+    .testimonial-card:nth-child(4) {
+        grid-column: 1/3;
+    }
+    .testimonial-card:nth-child(5) {
+        grid-column: 3/5;
+    }
+    .testimonial-card:nth-child(3) .card-imagen {
+        width: 10rem;
+    }
+    .testimonial-card:nth-child(3) .testigo-texto {
+        width: 18rem;
+        margin: auto;
+        padding: 2rem 0;
+    }
+
+    .card-testigo p{
+        font-size: 2rem;
+        text-align: left;
+    }
+    .card-testigo img{
+        width: 15rem;
+    }
+    /* RESTAURANTE */
+    .restaurantes-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .restaurante-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .restaurante-imagen{
+        width: 20rem;
+        padding: 5rem 0;
+    }
+    /* GANA */
+    .gana-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .gana-contenedor{
+        max-width: 100rem;
+        margin: auto;
+    }
+    /* DESCARGA */
+    .descarga-contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .descarga-acomodar{
+        display: flex;
+        flex-direction: column;
+        padding: 20rem 0;
+    }
+  /* FOOTER */
+  .contenedor-footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .footer-nav a{
+    padding: 0 10rem;
+    text-align: left;
+  }
+  .contenedor-footer p{
+    font-size: 2.3rem;
+  }
+
+}

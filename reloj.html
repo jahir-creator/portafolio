@@ -1,0 +1,42 @@
+<html>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+<head>
+<title>Reloj con Javascript</title>
+<script language="JavaScript">
+function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    horaImprimible = hora + " : " + minuto + " : " + segundo
+
+    document.form_reloj.reloj.value = horaImprimible
+
+
+    setTimeout("mueveReloj()",1000)
+    var myhora = momentoActual.toLocaleTimeString();
+    var hora7 = "23:08:00";
+
+    if (myhora == hora7){
+        console.log("cambia de color");
+        
+        obj = document.getElementById('main');
+        obj = document.body.classList.toggle("dark");
+        
+    }
+}
+
+</script>
+</head>
+
+<body onload="mueveReloj()">
+
+Vemos aquí el reloj funcionando...
+
+
+<main id="main"></main>
+</body>
+</html>
+

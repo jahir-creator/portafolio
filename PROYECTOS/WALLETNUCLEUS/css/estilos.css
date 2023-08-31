@@ -1,0 +1,468 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* HEADER */
+header {
+    background-image: url(../img/header_bg.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 10rem;
+    padding: 5rem 0;
+}
+
+.contenedor-header {
+    max-width: 35rem;
+    margin: auto;
+}
+
+.logo-header {
+    width: 15rem;
+    margin: 0 auto 3rem auto;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.header-texto {
+    text-align: center;
+}
+
+.link-btn {
+    display: block;
+    color: #ffff;
+    padding: 1rem;
+    max-width: 30rem;
+    margin: auto;
+    text-align: center;
+    background-color: #6834a6;
+    margin-bottom: 4rem;
+}
+
+/* NUCLEUS */
+main h2 {
+    text-align: center;
+}
+
+.contenedor-nucleus {
+    max-width: 35rem;
+    margin: auto;
+}
+
+.nucleus-grid {
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.listado-elemento {
+    background-color: #ffff;
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);
+    padding: 2rem;
+    margin-bottom: 5rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.listado-elemento:hover {
+    transform: scale(1.1);
+}
+
+.listado-elemento h2 {
+    color: #6834a6;
+}
+
+/* SEGURIDAD */
+.seguridad {
+    background-color: #6834a6;
+    padding: 20rem 0;
+    position: relative;
+    margin: 10rem 0;
+    overflow: hidden;
+    max-width: 35rem;
+    margin: auto;
+}
+
+.seguridad::before,
+.seguridad::after {
+    background-color: #ffff;
+    content: '';
+    height: 20rem;
+    width: 120%;
+    position: absolute;
+}
+
+.seguridad::before {
+    top: -10rem;
+    left: 0;
+    transform: rotate(3deg);
+}
+
+.seguridad::after {
+    bottom: -10rem;
+    left: 0;
+    transform: rotate(-3deg);
+}
+
+.contenedor-seguridad h2 {
+    color: #ffff;
+    font-size: 6rem;
+}
+
+.contenedor-seguridad p {
+    font-size: 2rem;
+}
+
+.contenedor-seguridad {
+    max-width: 30rem;
+    margin: auto;
+}
+
+
+/* COMISIONES */
+.comisiones {
+    max-width: 35rem;
+    margin: auto;
+    text-align: center;
+}
+
+.comisiones h2 {
+    font-size: 6rem;
+}
+
+.comisiones-texto {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.porciento {
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 900;
+    color: #6834a6;
+    text-align: center;
+}
+
+.texto {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* TESTIMONIALES */
+.testimoniales {
+    background-color: #6834a6;
+    padding: 5rem 0;
+    max-width: 35rem;
+    margin: auto;
+}
+
+.contenedor-testimoniales {
+    max-width: 30rem;
+    margin: auto;
+}
+
+.testimoniales-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contenedor-testimoniales h2 {
+    color: #ffff;
+    font-size: 5rem;
+}
+
+.testimonial {
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);
+    background-color: #ffff;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial-texto {
+    padding-left: 4rem;
+}
+
+.testimonial-texto::before {
+    content: '';
+    background-image: url(../img/comilla.png);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 2rem;
+}
+
+.testimonial-autor {
+    color: #6834a6;
+    font-weight: 700;
+    text-align: right;
+}
+/* FOOTER */
+footer{
+    background-color: #5A30A0;
+    padding: 3rem 0;
+}
+.blanco-footer{
+    padding: 2rem;
+}
+.footer-logo{
+    max-width: 30rem;
+    margin: auto;
+}
+.blanco-footer a{
+    color: #ffff;
+}
+
+/* MEDIA IPAD */
+@media (min-width: 768px) {
+
+    /* HEADER */
+    header {
+        background-size: 20rem;
+    }
+
+    .contenedor-header {
+        min-width: 70rem;
+    }
+
+    .link-btn {
+        width: 50rem;
+        height: 10rem;
+        font-size: 4rem;
+        border-radius: 2rem;
+    }
+
+    /* NUCLEUS */
+    .contenedor-nucleus {
+        max-width: 70rem;
+    }
+
+    /* SEGURIDAD */
+    .seguridad {
+        max-width: 75rem;
+    }
+
+    .contenedor-seguridad {
+        max-width: 70rem;
+    }
+
+    .contenedor-seguridad h2 {
+        font-size: 8rem;
+    }
+
+    .contenedor-seguridad p {
+        font-size: 4rem;
+    }
+
+    /* COMISIONES */
+    .comisiones {
+        max-width: 70rem;
+    }
+
+    /* TESTIMONIALES */
+    .testimoniales {
+        max-width: 75rem;
+        margin: auto;
+    }
+
+    .contenedor-testimoniales {
+        max-width: 70rem;
+        margin: auto;
+    }
+
+}
+
+
+/* MEDIA LAPTOP */
+@media (min-width: 1200px) {
+
+    /* HEADER */
+    header {
+        background-size: 110rem;
+    }
+
+    .contenedor-header {
+        min-width: 120rem;
+
+    }
+
+    .barra-header {
+        display: flex;
+        gap: 35rem;
+    }
+
+    .logo-header {
+        width: 20rem;
+        margin: 0;
+    }
+
+    .navegacion {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .navegacion a {
+        color: #ffff;
+    }
+
+    .header-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-texto {
+        width: 100%;
+        text-align: left;
+        padding: 10rem 0;
+    }
+
+    .header-texto h1 {
+        font-size: 5rem;
+    }
+
+    .link-btn {
+        width: 20rem;
+        height: 5rem;
+        font-size: 2rem;
+        margin: auto;
+    }
+
+    .header-grafico {
+        max-width: 30rem;
+        margin: 0 20rem;
+    }
+
+    /* NUCLEUS */
+    .contenedor-nucleus {
+        max-width: 120rem;
+    }
+
+    .nucleus-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+        align-items: center;
+    }
+
+    .nucleus-imagen {
+        width: 40rem;
+    }
+
+    /* SEGURIDAD */
+    .seguridad {
+        max-width: 200rem;
+    }
+
+    .seguridad-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9rem;
+    }
+
+    .contenedor-seguridad {
+        max-width: 120rem;
+    }
+
+    .contenedor-seguridad p {
+        font-size: 2rem;
+    }
+
+    /* COMISIONES */
+    .comisiones {
+        max-width: 150rem;
+
+    }
+
+    .contenedor-comisiones {
+        max-width: 120rem;
+        margin: auto;
+    }
+
+    .comisiones-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9rem;
+    }
+
+    .comisiones-contenido {
+        padding: 6rem;
+    }
+
+    .porciento {
+        font-size: 4rem;
+    }
+
+    .texto {
+        font-size: 2rem;
+    }
+    /* TESTIMONIALES */
+    .testimoniales{
+        max-width: 200rem;
+        margin: auto;
+    }
+    .contenedor-testimoniales{
+        max-width: 120rem;
+    }
+    .testimoniales-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* FFOOTER */
+    .footer-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer-logo{
+        max-width: 30rem;
+        margin: 0 3rem;
+    }
+}
