@@ -25,8 +25,8 @@
                     <a href="#" class="contacto">CONTACTO</a>
                     <a href="#" class="pasatiempos">PASATIEMPOS</a>
                     <a href="#" class="proyectos">PROYECTOS</a>
-                    <a href="#" class="certificaciones">TECNOLOGIAS</a>
-                    <a href="#" class="inicio">INICO</a>
+                    <a href="#tecnologias" class="tecnologias"  data-target="tecnologias">TECNOLOGIAS</a>
+                    <a href="#inicio" class="inicio" data-target="inicio">INICO</a>
 
                     <div class="alien" id="alien"></div>
 
@@ -49,7 +49,7 @@
                 </label>
             </div>
         </div> -->
-            <div class="informacion-mia">
+            <div class="informacion-mia" id="inicio">
                 <div class="contenedor-informacion-mia">
                     <div class="nombre">
                         <h2>HOLA <span>MI NOMBRE ES:</span></h2>
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="certificacion">
+            <div class="certificacion" id="tecnologias">
                 <h1>TECNOLOGIAS</h1>
                 <div class="slider">
                     <div class="html carousel-slide">
@@ -156,6 +156,64 @@
 
 
     <script src="JS/bandera.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   $(document).ready(function() {
+      $("a.inicio").click(function(e) {
+         e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+         
+         var target = $(this).data("target"); // Obtiene el ID del div destino
+         var offset = $("#" + target).offset().top; // Calcula la posición del div
+         
+         // Aplica un efecto de desplazamiento suave
+         $("html, body").animate({
+            scrollTop: offset
+         }, 1000, function() {
+            // Una vez finalizada la animación, redirige a la ubicación del div
+            window.location.hash = target;
+         });
+      });
+   });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const divOculto = document.getElementById('tecnologias');
+  
+      // Verifica si el ancho de la ventana es mayor que 768px
+      if (window.innerWidth > 768) {
+        let isVisible = false; // Variable para rastrear si el div es visible
+  
+        // Función para mostrar los elementos del div
+        function mostrarElementos() {
+          if (!isVisible) {
+            divOculto.style.opacity = '1';
+            isVisible = true;
+          }
+        }
+  
+        // Crea un observador de intersección
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              mostrarElementos();
+            } else {
+              divOculto.style.opacity = '0';
+              isVisible = false;
+            }
+          });
+        }, { threshold: 0.5 });
+  
+        // Empieza a observar el div oculto
+        observer.observe(divOculto);
+      } else {
+        // Si el ancho es menor o igual a 768px, simplemente muestra el div
+        divOculto.style.opacity = '1';
+      }
+    });
+  </script>
+  
+  
+ 
 
 </body>
 

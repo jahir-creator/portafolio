@@ -364,21 +364,25 @@ main {
     height: 100%;
     max-width: 80rem;
 }
-.contenedor-informacion-mia{
+
+.contenedor-informacion-mia {
     margin: 0 auto;
     padding: 2rem 2rem;
 }
+
 .nombre {
     max-width: 16.9rem;
     margin: 0 auto;
     padding: 2rem 0;
 }
-.nombre h2{
+
+.nombre h2 {
     font-size: 1rem;
     color: #fff;
     text-align: center;
 }
-.nombre span{
+
+.nombre span {
     color: rgb(73, 122, 118);
 }
 
@@ -386,7 +390,7 @@ main {
     font-size: 1.3rem;
     position: relative;
     color: rgb(31, 40, 49);
-    
+
 }
 
 .nombre h1::before {
@@ -400,6 +404,7 @@ main {
     animation: slide 10s linear infinite;
     overflow: hidden;
 }
+
 @keyframes slide {
     0% {
         width: 0%;
@@ -413,20 +418,24 @@ main {
         width: 0%;
     }
 }
-.descripcion{
+
+.descripcion {
     display: grid;
     gap: 2rem;
 }
-.descripcion h3{
+
+.descripcion h3 {
     font-size: 15px;
     color: rgb(177, 184, 190);
     text-align: center;
 }
-.descripcion p{
+
+.descripcion p {
     font-size: 15px;
     color: rgb(177, 184, 190);
     text-align: justify;
 }
+
 img {
     max-width: 139%;
     display: block;
@@ -437,13 +446,14 @@ img {
     padding: 4rem;
     margin: 0 auto;
     animation: myAnim 10s linear 0s infinite alternate both;
-    filter: drop-shadow(0.5em 1em 10px rgb(39, 54, 57)); 
-    
+    filter: drop-shadow(0.5em 1em 10px rgb(39, 54, 57));
+
 }
-.hexagono{
+
+.hexagono {
     width: 12rem;
     height: 12rem;
-    background-color: rgb(0, 189, 149); 
+    background-color: rgb(0, 189, 149);
     /* clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); */
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     margin: 0 auto;
@@ -464,7 +474,7 @@ img {
 }
 
 /* certificaciones */
-.certificacion{
+.certificacion {
     background-color: #171C22;
     margin: 0 auto;
     display: grid;
@@ -472,23 +482,37 @@ img {
     grid-template-rows: 100px repeat(6, 1fr);
     justify-items: center;
 }
-.certificacion h1{
+
+.certificacion h1 {
     font-size: 2rem;
     color: transparent;
     background: linear-gradient(to right, #3AAD96 5%, #0057da 50%, #3AAD96 100%);
     -webkit-background-clip: text;
     background-clip: text;
 }
+
 .certificacion .html,
-.css,.js, .nodejs, .expressjs,
-.php, .laravel, .java, .springboot, .react,
-.mysql, .postgres, .oracle,
-.python, .manjaro, .debian, .windows {
+.css,
+.js,
+.nodejs,
+.expressjs,
+.php,
+.laravel,
+.java,
+.springboot,
+.react,
+.mysql,
+.postgres,
+.oracle,
+.python,
+.manjaro,
+.debian,
+.windows {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
-    border:1px solid #fff;
+    border: 1px solid #fff;
     width: 15rem;
     height: 20rem;
     margin-bottom: 1rem;
@@ -497,136 +521,152 @@ img {
 }
 
 
-
-.html:hover{
+.html:hover {
     background-image: radial-gradient(circle, #E65100 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
 }
-.css:hover{
+
+.css:hover {
     background-image: radial-gradient(circle, #0277BD 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
 }
-.js:hover{
+
+.js:hover {
     background-image: radial-gradient(circle, #FFD600 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
 }
-.nodejs:hover{
+
+.nodejs:hover {
     background-image: radial-gradient(circle, #4CAF50 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
 }
-.expressjs:hover{
+
+.expressjs:hover {
     background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
     color: #fff;
 }
-.php:hover{
+
+.php:hover {
     background-image: radial-gradient(circle, #B5C4E0 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
 }
-.laravel:hover{
+
+.laravel:hover {
     background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
     color: #fff;
 }
-.java:hover{
+
+.java:hover {
     background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
     color: #fff;
 }
-.springboot:hover{
+
+.springboot:hover {
     background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
     color: #fff;
 }
-.react:hover{
+
+.react:hover {
     background-image: radial-gradient(circle, #B8B5FF 90%, transparent 10%);
-    transition: background-size 2s; 
+    transition: background-size 2s;
 }
-.mysql:hover{
+
+.mysql:hover {
     background-image: radial-gradient(circle, #333333 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.postgres:hover{
+
+.postgres:hover {
     background-image: radial-gradient(circle, #333333 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.oracle:hover{
+
+.oracle:hover {
     background-image: radial-gradient(circle, #333333 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.python:hover{
+
+.python:hover {
     background-image: radial-gradient(circle, #333333 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.manjaro:hover{
+
+.manjaro:hover {
     background-image: radial-gradient(circle, #34BE5B 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.debian:hover{
+
+.debian:hover {
     background-image: radial-gradient(circle, #333333 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.windows:hover{
+
+.windows:hover {
     background-image: radial-gradient(circle, #333333 90%, transparent 10%);
     transition: background-size 2s;
-    color: #fff; 
+    color: #fff;
 }
-.certificacion img{
+
+.certificacion img {
     width: 10rem;
 }
 
 
 
 @keyframes myAnim {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 1;
-		transform: translateY(-45px);
-	}
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(-45px);
+    }
 
-	24% {
-		opacity: 1;
-	}
+    24% {
+        opacity: 1;
+    }
 
-	40% {
-		animation-timing-function: ease-in;
-		transform: translateY(-24px);
-	}
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateY(-24px);
+    }
 
-	65% {
-		animation-timing-function: ease-in;
-		transform: translateY(-12px);
-	}
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateY(-12px);
+    }
 
-	82% {
-		animation-timing-function: ease-in;
-		transform: translateY(-6px);
-	}
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateY(-6px);
+    }
 
-	93% {
-		animation-timing-function: ease-in;
-		transform: translateY(-4px);
-	}
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
+    }
 
-	25%,
-	55%,
-	75%,
-	87% {
-		animation-timing-function: ease-out;
-		transform: translateY(0px);
-	}
+    25%,
+    55%,
+    75%,
+    87% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
 
-	100% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0px);
-	}
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 
@@ -660,29 +700,35 @@ img {
         background-size: 200px 100%;
     } */
     .nombre {
-       min-width: 75%;
+        min-width: 75%;
     }
-    .nombre h2{
+
+    .nombre h2 {
         font-size: 1.5rem;
         color: #fff;
         text-align: center;
-    } 
+    }
+
     .nombre h1 {
         font-size: 2rem;
         position: relative;
         color: rgb(31, 40, 49);
-        
+
     }
-    .descripcion h3{
+
+    .descripcion h3 {
         font-size: 1rem;
     }
-    .descripcion p{
+
+    .descripcion p {
         font-size: 20px;
     }
+
     .fotografia img {
         width: 13rem;
     }
-    .slider{
+
+    .slider {
         background-color: #171C22;
         margin: 0 auto;
         display: grid;
@@ -701,9 +747,10 @@ img {
     }
 
     /* PORTAFOLIO */
-    .contenedor-header{
+    .contenedor-header {
         height: 9rem;
     }
+
     .alien {
         min-width: 2rem;
         height: 2rem;
@@ -789,7 +836,8 @@ img {
         grid-column: 6 / 6;
         grid-row: 1/1;
     }
-    .header-flex a{
+
+    .header-flex a {
         padding: 1rem;
     }
 
@@ -815,42 +863,81 @@ img {
     .flag_img {
         background-size: 250px 100%;
     }
-   
-    .contenedor-informacion-mia{
+
+    .contenedor-informacion-mia {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 300px;
     }
-    .nombre{
+
+    .nombre {
         grid-column: 1/1;
         grid-rows: 1/1;
     }
-    .descripcion{
+
+    .descripcion {
         grid-column: 1/1;
         grid-row: 2/2;
     }
-    
+
     .nombre {
         min-width: 95%;
-     }
-     .nombre h2{
-         font-size: 1.5rem;
-         color: #fff;
-         text-align: center;
-     } 
-     .nombre h1 {
-         font-size: 2rem;
-         position: relative;
-         color: rgb(31, 40, 49);
-         
-     }
-     .certificacion{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr ;
     }
-    .slider{
+
+    .nombre h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .nombre h1 {
+        font-size: 2rem;
+        position: relative;
+        color: rgb(31, 40, 49);
+    }
+
+    .certificacion {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        opacity: 0; /* Configura la opacidad inicialmente a 0 */
+        transition: opacity 0.3s ease-in-out;
+    }
+   
+    .certificacion .html,
+    .css,
+    .js,
+    .nodejs,
+    .expressjs,
+    .php,
+    .laravel,
+    .java,
+    .springboot,
+    .react,
+    .mysql,
+    .postgres,
+    .oracle,
+    .python,
+    .manjaro,
+    .debian,
+    .windows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+    }
+    .slider img{
+        width: 50%;
+        height: auto;
+    }
+    .slider h3{
+        font-size: 10px;
+    }
+    .slider {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        width: 80%;
     }
 
 }
@@ -876,5 +963,8 @@ img {
 
     .header-flex a {
         font-size: 1rem;
+    }
+    .nombre {
+        min-width: 75%;
     }
 }
