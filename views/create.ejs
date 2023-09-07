@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REFERENCIAS</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <script src="https://kit.fontawesome.com/53f620cc7d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="main-create">
+        <div class="contenedor-create">
+            <div class="titulo">
+                <h1>REFERENCIAS</h1>
+            </div>
+            <div class="formularios">
+                <form action="/save" method="post" enctype="multipart/form-data">
+                    <div class="nombre-create fo">
+                        <label for="">NOMBRE:</label>
+                        <input type="text" name="nombre">
+                    </div>
+                    <div class="apellidos fo">
+                        <label for="">APELLIDOS:</label>
+                        <input type="text" name="apellidos">
+                    </div>
+                    <div class="empresa fo">
+                        <label for="">NOMBRE DE LA EMPRESA:</label>
+                        <input type="text" name="empresa">
+                    </div>
+                    <div class="telefono fo">
+                        <label for="">TELEFONO:</label>
+                        <input type="text" name="telefono">
+                    </div>
+                    <div class="telefono-empresa fo">
+                        <label for="">TELEFONO EMPRESA:</label>
+                        <input type="text" name="telempresa">
+                    </div>
+                    <div class="email fo">
+                        <label for="">CORREO ELECTRONICO:</label>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="comentario fo">
+                        <label for="">COMENTARIOS:</label>
+                        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="calificacion fo">
+                        <div>
+                            <label for="">CALIFICACION:</label>
+                        </div>
+                        <div class="imag">
+                            <i class="fa-solid fa-star star" data-rating="1"></i>
+                            <i class="fa-solid fa-star star" data-rating="2"></i>
+                            <i class="fa-solid fa-star star" data-rating="3"></i>
+                            <i class="fa-solid fa-star star" data-rating="4"></i>
+                            <i class="fa-solid fa-star star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" name="rating" id="rating" value="0">
+                    </div>
+                    <div class="foto fo">
+                        <label for="">FOTOGRAFIA:</label>
+                        <input type="file" name="imagen" id="imagen">
+                    </div>
+                    <div class="boton fo">
+                        <button type="submit">GUARDAR</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script src="../JS/star.js"></script>
+</body>
+
+</html>

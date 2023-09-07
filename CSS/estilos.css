@@ -479,7 +479,6 @@ img {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px repeat(6, 1fr);
     justify-items: center;
 }
 
@@ -621,7 +620,251 @@ img {
     width: 10rem;
 }
 
+.comentarios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 
+.card {
+    border: 2px solid red;
+    width: 50%;
+    background-color: #0099e0;
+}
+
+/* PROYECTOS */
+.proyect {
+    background-color: #1f2831;
+}
+
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr) 100px;
+    gap: 10px;
+    padding: 0 4rem;
+}
+
+.card-proyectos {
+    border: 2px solid black;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+    position: relative;
+    /* Establece la altura deseada para la tarjeta */
+    overflow: hidden;
+    /* Recorta cualquier contenido que desborde el límite de la tarjeta */
+}
+
+.titulo-proyect {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(to right, #00fac8 5%, #0057da 50%, #070af1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.card-proyectos img {
+    width: 100%;
+    height: 100%;
+}
+
+.texto-superpuesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-proyectos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* TESTIMONIALES */
+.testimonials {
+    background-color: #171c22;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.testimonials h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(to right, #d000fa 5%, #0057da 50%, #e90410 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.testimonial-card {
+    background-color: #455a64;
+    color: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.card-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card-imagen {
+    flex-basis: 10rem;
+    overflow: hidden;
+}
+
+.card-imagen img {
+    max-width: 80%;
+    border-radius: 100%;
+    display: block;
+    height: auto;
+}
+
+.card-testigo {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-testimonial,
+.apellido-testimonial {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    font-size: 12px;
+}
+
+.card-calificacion {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.card-body label {
+    font-size: 18px;
+    line-height: 0.1;
+}
+
+.card-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.dat-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer label {
+    font-size: 10px;
+}
+
+/* CREAR */
+.contenedor-create {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.titulo {
+    background-color: #eeeff3;
+    width: 100%;
+    color: #2abf9f;
+}
+
+.contenedor-create h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.formularios {
+    padding: 2rem 2rem;
+}
+
+.formularios .fo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.formularios input,
+textarea {
+    border: 2px solid #efefef;
+    border-radius: 20px 20px 20px 20px;
+    color: #6c757d;
+    padding: 0 2rem;
+    width: 100%;
+    font-size: 20px;
+}
+
+.formularios textarea {
+    font-size: 20px;
+}
+
+.formularios input:hover,
+textarea:hover {
+    border: none;
+    /* Eliminar todos los bordes */
+    border-bottom: 1px solid #000;
+    /* Agregar borde solo en la parte inferior */
+    outline: none;
+}
+
+.formularios label {
+    color: #c3c8ca;
+    font-size: 25px;
+}
+
+.imag {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+}
+
+.star {
+    width: 20px;
+    color: #ddd;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.star:hover,
+.star.checked {
+    color: gold;
+}
+
+#imagen {
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.boton {
+    padding: 2rem 3rem;
+}
+
+.boton button {
+    background-color: #497a76;
+    color: #efefef;
+    width: 80%;
+    height: 50px;
+}
+
+.boton button:hover {
+    background-color: #2abf9f;
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 @keyframes myAnim {
     0% {
@@ -736,6 +979,57 @@ img {
         gap: 10px;
         justify-items: center;
     }
+
+    /* PROYECTOS */
+    .contenedor-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 15rem);
+        grid-template-rows: repeat(3, 1fr) 100px;
+        gap: 10px;
+        padding: 0 4rem;
+    }
+
+    .card-proyectos img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* TESTIMONIALES */
+
+    .card-header {
+        justify-content: space-evenly;
+    }
+
+    .card-imagen {
+        flex-basis: 12rem;
+    }
+
+    .nombre-testimonial,
+    .apellido-testimonial {
+        font-weight: bold;
+        margin: 0.5rem 0;
+        font-size: 25px;
+    }
+
+    .card-calificacion {
+        display: grid;
+        grid-template-columns: repeat(5, 40px);
+        gap: 10px;
+    }
+
+    .card-body label {
+        font-size: 2rem;
+        line-height: 0.1;
+    }
+
+    .card-footer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-footer label {
+        font-size: 15px;
+    }
+
 }
 
 /* MEDIA LAPTOP */
@@ -827,7 +1121,7 @@ img {
         grid-row: 1/1;
     }
 
-    .pasatiempos {
+    .testimoniales {
         grid-column: 5 / 5;
         grid-row: 1/1;
     }
@@ -899,10 +1193,12 @@ img {
     .certificacion {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        opacity: 0; /* Configura la opacidad inicialmente a 0 */
+        opacity: 0;
+        /* Configura la opacidad inicialmente a 0 */
         transition: opacity 0.3s ease-in-out;
+
     }
-   
+
     .certificacion .html,
     .css,
     .js,
@@ -927,17 +1223,128 @@ img {
         width: 5rem;
         height: 5rem;
     }
-    .slider img{
+
+    .slider img {
         width: 50%;
         height: auto;
     }
-    .slider h3{
+
+    .slider h3 {
         font-size: 10px;
     }
+
     .slider {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         width: 80%;
+    }
+
+    /* PROYECTOS */
+    .contenedor-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr) 300px 20px;
+        gap: 10px;
+        padding: 0 4rem;
+
+    }
+
+    .arqui {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .audifo {
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+    }
+
+    .deli {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .eco {
+        grid-column: 2/3;
+        grid-row: 2/2;
+    }
+
+    .wall {
+        grid-column: 1/4;
+        max-width: 100%;
+    }
+
+    /* CREAR */
+    .contenedor-create {
+        flex-direction: row;
+    }
+    
+    .titulo {
+        background-color: #eeeff3;
+        width: 50%;
+        color: #2abf9f;
+    }
+    .formularios {
+        padding: 2rem 8rem;
+    }
+
+    .boton {
+        padding-left: 1rem;
+    }
+
+    /* TESTIMONIALES */
+    .testimonials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .testimonials h1 {
+        grid-column: 1/3;
+        grid-row: 1/1;
+    }
+
+    .testimonial-card {
+        width: 90%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card-imagen {
+        flex-basis: 10rem;
+    }
+
+   
+
+    .nombre-testimonial,
+    .apellido-testimonial {
+        font-weight: bold;
+        margin: 0.5rem 0;
+        font-size: 15px;
+    }
+
+    .card-calificacion i {
+        font-size: 25px;
+    }
+
+    
+    .card-body p {
+        font-size: 1rem;
+        line-height: 2;
+        width: 100%;
+    }
+
+    .card-footer {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .card-footer label {
+        font-size: 15px;
     }
 
 }
@@ -964,7 +1371,32 @@ img {
     .header-flex a {
         font-size: 1rem;
     }
+
     .nombre {
         min-width: 75%;
     }
+    /* TESTIMONIALES */
+    .nombre-testimonial,
+    .apellido-testimonial {
+        font-weight: bold;
+        margin: 0.5rem 0;
+        font-size: 20px;
+    }
+
+    /* CREAR */
+    .boton {
+        padding-left: 0;
+    }
+
+    .boton button {
+        max-width: 300px;
+    }
+    .titulo {
+        background-color: #eeeff3;
+        width: 30%;
+        color: #2abf9f;
+    }
+    
+
+    
 }
