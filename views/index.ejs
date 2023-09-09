@@ -152,98 +152,123 @@
                     </div>
                 </div>
             </div>
+
             <div class="proyect" id="proyect">
-                <h1 class="titulo-proyect">PROYECTOS</h1>
-                <div class="contenedor-cards">
-                    <div class="card-proyectos arqui">
-                        <a href="/PROYECTOS/ARQUITECTURA/arquitectura.html"><img src="../imagenes/modelo_premier.jpg"
-                                alt=""><span class="texto-superpuesto">ARQUITECTURA</span></a>
+                <div class="contendor-proyectos">
+                    <div class="titulo-proyectos">
+                        <h1 class="titulo-proyect">PROYECTOS</h1>
                     </div>
-                    <div class="card-proyectos audifo">
-                        <a href="/PROYECTOS/AUDIFONOS/audifonos.html"><img src="../imagenes/newsletter.jpg" alt=""><span
-                                class="texto-superpuesto">AUDIFONOS</span></a>
-                    </div>
-                    <div class="card-proyectos deli">
-                        <a href="/PROYECTOS/DELIVERY/delivery.html"><img src="../imagenes/repartidor.jpg" alt=""><span
-                                class="texto-superpuesto">DELIVERY</span></a>
-                    </div>
-                    <div class="card-proyectos eco">
-                        <a href="/PROYECTOS/ECOMMERCE/Inicio.html"><img
-                                src="../imagenes/pexels-emre-can-acer-2079249.jpg" alt=""><span
-                                class="texto-superpuesto">ECOMMERCE</span></a>
-                    </div>
-                    <div class="card-proyectos pod">
-                        <a href="/PROYECTOS/PODCAST/index.html"><img src="../imagenes/header.jpg" alt=""><span
-                                class="texto-superpuesto">PODCAST</span></a>
-                    </div>
-                    <div class="card-proyectos wall">
-                        <a href="/PROYECTOS/WALLETNUCLEUS/wallet.html"><img src="../imagenes/iphine-8-2968158_1280.jpg"
-                                alt=""><span class="texto-superpuesto">WALLETNUCLEUS</span></a>
+                    <div class="contenedor-cards">
+                        <div class="card-proyectos arqui">
+                            <a href="/PROYECTOS/ARQUITECTURA/arquitectura.html"><img
+                                    src="../imagenes/modelo_premier.jpg" alt=""><span
+                                    class="texto-superpuesto">ARQUITECTURA</span></a>
+                        </div>
+                        <div class="card-proyectos audifo">
+                            <a href="/PROYECTOS/AUDIFONOS/audifonos.html"><img src="../imagenes/newsletter.jpg"
+                                    alt=""><span class="texto-superpuesto">AUDIFONOS</span></a>
+                        </div>
+                        <div class="card-proyectos deli">
+                            <a href="/PROYECTOS/DELIVERY/delivery.html"><img src="../imagenes/repartidor.jpg"
+                                    alt=""><span class="texto-superpuesto">DELIVERY</span></a>
+                        </div>
+                        <div class="card-proyectos eco">
+                            <a href="/PROYECTOS/ECOMMERCE/Inicio.html"><img src="../imagenes/principal.jpg" alt=""><span
+                                    class="texto-superpuesto">ECOMMERCE</span></a>
+                        </div>
+                        <div class="card-proyectos pod">
+                            <a href="/PROYECTOS/PODCAST/index.html"><img src="../imagenes/header.jpg" alt=""><span
+                                    class="texto-superpuesto">PODCAST</span></a>
+                        </div>
+                        <div class="card-proyectos wall">
+                            <a href="/PROYECTOS/WALLETNUCLEUS/wallet.html"><img
+                                    src="../imagenes/iphine-8-2968158_1280.jpg" alt=""><span
+                                    class="texto-superpuesto">WALLETNUCLEUS</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="testimonials" id="testimoniales">
-                <h1>TESTIMONIALES</h1>
-                <% results.forEach((coment)=> { %>
-                    <div class="testimonial-card">
-                        <div class="card-header">
+                <div class="contenedor-testimoniales">
 
-                            <div class="card-imagen">
-                                <img src="<%= coment.url %>" alt="Imagen de comentario">
-                            </div>
-
-                            <div class="card-testigo">
-                                <div class="card-datos">
-                                    <label for="" class="nombre-testimonial">
-                                        <%= coment.nombre %>
-                                    </label>
-                                    <label for="" class="apellido-testimonial">
-                                        <%= coment.apellido %>
-                                </div>
-                                <div class="card-calificacion">
-                                    </label>
-                                    <% for (let i=1; i <=5; i++) { %>
-                                        <i
-                                            class="fa-solid fa-star star <%= i <= coment.calificacion ? 'checked' : '' %>"></i>
-                                        <% } %>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p><%= coment.comentario %></p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="dat-footer">
-                                <label for="">EMPRESA:</label>
-                                <label for="">
-                                    <%= coment.empresa %>
-                                </label>
-                            </div>
-                            <div class="dat-footer">
-                                <label for="">CORREO:</label>
-                                <label for="">
-                                    <%= coment.email %>
-                                </label>
-                            </div>
-                            <div class="dat-footer">
-                                <label for="">TELEFONO:</label>
-                                <label for="">
-                                    <%= coment.telefono %>
-                                </label>
-                            </div>
-                            <div class="dat-footer">
-                                <label for="">TEL EMPRESA:</label>
-                                <label for="">
-                                    <%= coment.telempresa %>
-                                </label>
-                            </div>
-                        </div>
-
-
-
+                    <div class="titulo-testimoniales">
+                        <h1>TESTIMONIALES</h1>
                     </div>
-                    <% }) %>
+                    
+                    <% results.forEach((coment)=> { %>
+                    
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+
+                                <div class="card-imagen">
+                                    <img src="<%= coment.url %>" alt="Imagen de comentario">
+                                </div>
+
+                                <div class="card-testigo">
+                                    <div class="card-datos">
+                                        <div>
+                                        <label for="" class="nombre-testimonial">
+                                            <%= coment.nombre %>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label for="" class="apellido-testimonial">
+                                            <%= coment.apellido %>
+                                        </label>
+                                    </div>
+                                    </div>
+                                    <div class="card-calificacion">
+
+                                        <% for (let i=1; i <=5; i++) { %>
+                                            <i
+                                                class="fa-solid fa-star star <%= i <= coment.calificacion ? 'checked' : '' %>"></i>
+                                            <% } %>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <%= coment.comentario %>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="dat-footer">
+                                    <label for="">EMPRESA:</label>
+                                    <label for="">
+                                        <%= coment.empresa %>
+                                    </label>
+                                </div>
+                                <div class="dat-footer">
+                                    <label for="">CORREO:</label>
+                                    <label for="">
+                                        <%= coment.email %>
+                                    </label>
+                                </div>
+                                <div class="dat-footer">
+                                    <label for="">TELEFONO:</label>
+                                    <label for="">
+                                        <%= coment.telefono %>
+                                    </label>
+                                </div>
+                                <div class="dat-footer">
+                                    <label for="">TEL EMPRESA:</label>
+                                    <label for="">
+                                        <%= coment.telempresa %>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <% }) %>
+                </div>
+                
             </div>
+
         </div>
     </main>
 

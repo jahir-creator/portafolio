@@ -635,25 +635,35 @@ img {
 /* PROYECTOS */
 .proyect {
     background-color: #1f2831;
+    width: 100%;
+}
+
+.contendor-proyectos {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .contenedor-cards {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr) 100px;
     gap: 10px;
-    padding: 0 4rem;
 }
 
 .card-proyectos {
-    border: 2px solid black;
-    width: 100%;
-    max-width: 20rem;
-    margin: 0 auto;
     position: relative;
-    /* Establece la altura deseada para la tarjeta */
     overflow: hidden;
-    /* Recorta cualquier contenido que desborde el límite de la tarjeta */
+}
+
+.card-proyectos img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-proyectos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .titulo-proyect {
@@ -666,10 +676,6 @@ img {
     background-clip: text;
 }
 
-.card-proyectos img {
-    width: 100%;
-    height: 100%;
-}
 
 .texto-superpuesto {
     position: absolute;
@@ -683,20 +689,19 @@ img {
     text-align: center;
 }
 
-.card-proyectos img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
 /* TESTIMONIALES */
 .testimonials {
     background-color: #171c22;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
+    width: 100%;
 }
 
-.testimonials h1 {
+.contenedor-testimoniales {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contenedor-testimoniales h1 {
     text-align: center;
     margin: 0;
     font-size: 2rem;
@@ -712,6 +717,9 @@ img {
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .card-header {
@@ -721,48 +729,43 @@ img {
 }
 
 .card-imagen {
-    flex-basis: 10rem;
+    flex-basis: 5rem;
+    border-radius: 50%;
     overflow: hidden;
 }
 
 .card-imagen img {
-    max-width: 80%;
-    border-radius: 100%;
-    display: block;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .card-testigo {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    margin-left: 2rem;
 }
 
-.nombre-testimonial,
-.apellido-testimonial {
-    font-weight: bold;
-    margin: 0.5rem 0;
-    font-size: 12px;
-}
-
-.card-calificacion {
+.card-datos {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    grid-template-rows: repeat(2, 20px);
 }
 
-.card-body label {
-    font-size: 18px;
-    line-height: 0.1;
+.card-datos label {
+    font-size: 15px;
+    line-height: 0.2;
+}
+
+.card-calificacion i {
+    font-size: 1rem;
+}
+
+.card-body p {
+    font-size: 1rem;
+    text-align: justify;
 }
 
 .card-footer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.dat-footer {
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: repeat(4, 20px);
 }
 
 .card-footer label {
@@ -981,54 +984,37 @@ textarea:hover {
     }
 
     /* PROYECTOS */
+
     .contenedor-cards {
         display: grid;
-        grid-template-columns: repeat(2, 15rem);
-        grid-template-rows: repeat(3, 1fr) 100px;
-        gap: 10px;
-        padding: 0 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr) 10px;
+        gap: 20px;
+    }
+
+    .card-proyectos {
+        position: relative;
+        overflow: hidden;
     }
 
     .card-proyectos img {
+        width: 100%;
         height: 100%;
-        object-fit: cover;
     }
+
 
     /* TESTIMONIALES */
-
-    .card-header {
-        justify-content: space-evenly;
-    }
-
-    .card-imagen {
-        flex-basis: 12rem;
-    }
-
-    .nombre-testimonial,
-    .apellido-testimonial {
-        font-weight: bold;
-        margin: 0.5rem 0;
-        font-size: 25px;
-    }
-
-    .card-calificacion {
+    .contenedor-testimoniales {
         display: grid;
-        grid-template-columns: repeat(5, 40px);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
     }
 
-    .card-body label {
-        font-size: 2rem;
-        line-height: 0.1;
+    .titulo-testimoniales {
+        grid-column: 1 / 3;
+        grid-row: 1/1;
     }
 
-    .card-footer {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card-footer label {
-        font-size: 15px;
-    }
 
 }
 
@@ -1243,15 +1229,16 @@ textarea:hover {
     .contenedor-cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr) 300px 20px;
+        grid-template-rows: repeat(3, 1fr) 20px;
         gap: 10px;
-        padding: 0 4rem;
-
+        width: 80%;
+        max-height: 20rem;
+        margin: 0 auto;
     }
 
     .arqui {
         grid-column: 1 / 2;
-        grid-row: 1 / 3;
+        grid-row: 1 / 4;
     }
 
     .audifo {
@@ -1270,20 +1257,21 @@ textarea:hover {
     }
 
     .wall {
-        grid-column: 1/4;
-        max-width: 100%;
+        grid-column: 2/4;
+        grid-row: 3/3;
     }
 
     /* CREAR */
     .contenedor-create {
         flex-direction: row;
     }
-    
+
     .titulo {
         background-color: #eeeff3;
         width: 50%;
         color: #2abf9f;
     }
+
     .formularios {
         padding: 2rem 8rem;
     }
@@ -1293,60 +1281,74 @@ textarea:hover {
     }
 
     /* TESTIMONIALES */
-    .testimonials {
+    .contenedor-testimoniales {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .testimonials h1 {
-        grid-column: 1/3;
+    .titulo-testimoniales {
+        grid-column: 1 / 4;
         grid-row: 1/1;
     }
-
-    .testimonial-card {
-        width: 90%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .card-imagen {
-        flex-basis: 10rem;
-    }
-
-   
-
-    .nombre-testimonial,
-    .apellido-testimonial {
-        font-weight: bold;
-        margin: 0.5rem 0;
-        font-size: 15px;
-    }
-
-    .card-calificacion i {
-        font-size: 25px;
-    }
-
     
-    .card-body p {
-        font-size: 1rem;
-        line-height: 2;
+    .testimonial-card {
+        border: 3px solid goldenrod;
+    }
+    
+    .card-header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-imagen {
+        flex-basis: 6rem;
+        border-radius: 50%;
+        width: 7rem;
+        overflow: hidden;
+        border: 3px solid goldenrod;
+    }
+    
+    .card-imagen img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .card-testigo {
         width: 100%;
     }
+    
+    .card-datos {
+        display: grid;
+        grid-template-rows: repeat(1, 30px);
+        justify-content: center;
+    }
+    
+    .card-datos label {
+        font-size: 1rem;
+    }
+    .card-calificacion{
+        display: grid;
+        grid-template-columns: repeat(5, 50px);
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
 
+    }
+    .card-calificacion i {
+        font-size: 1rem;
+    }
+    
+    .card-body p {
+        font-size: 15px;
+    }
+    
     .card-footer {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        display: grid;
+        grid-template-rows: repeat(4, 20px);
     }
     
     .card-footer label {
-        font-size: 15px;
+        font-size: 12px;
     }
-
+    
 }
 
 /* MEDIA PC */
@@ -1375,6 +1377,15 @@ textarea:hover {
     .nombre {
         min-width: 75%;
     }
+
+    /* PROYECTOS */
+    .contenedor-cards {
+        width: 90%;
+        max-height: 26rem;
+    }
+
+
+
     /* TESTIMONIALES */
     .nombre-testimonial,
     .apellido-testimonial {
@@ -1391,12 +1402,13 @@ textarea:hover {
     .boton button {
         max-width: 300px;
     }
+
     .titulo {
         background-color: #eeeff3;
         width: 30%;
         color: #2abf9f;
     }
-    
 
-    
+
+
 }
