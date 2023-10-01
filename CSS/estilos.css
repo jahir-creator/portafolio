@@ -394,7 +394,7 @@ main {
 }
 
 .nombre h1::before {
-    content: "-:JAHIR_FLORES_REYES:-";
+    content: "-:JAHIR.FLORES.REYES:-";
     width: 100%;
     color: rgb(34, 178, 145);
     position: absolute;
@@ -472,7 +472,46 @@ img {
     clip-path: polygon(25% 0%, 75% 0%, 100% 38%, 82% 100%, 18% 100%, 0 38%);
 
 }
+.redes-sociales{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.redes-sociales h3 {
+    font-size: 1.5rem;
+    color: rgb(177, 184, 190);
+    text-align: center;
+}
 
+.image-with-shadow {
+    display: inline-block;
+    width: 5rem;
+    /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto;
+    /* Mantener la proporción de la imagen */
+    margin: 25px auto;
+    /* Centrar la imagen horizontalmente */
+    border-radius: 50%;
+    /* Hacer que la sombra sea redonda */
+    animation: rotate 7s ease infinite;
+}
+
+.git a {
+    
+    border-radius: 50%;
+    /* Hacer que la sombra sea redonda */
+    background-color: #b6b5b5;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); /* Inicio sin rotación */
+    }
+    100% {
+        transform: rotate(360deg); /* Gira 360 grados al final de la animación */
+    }
+}
 /* certificaciones */
 .certificacion {
     background-color: #171C22;
@@ -699,6 +738,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 .contenedor-testimoniales h1 {
@@ -770,6 +810,27 @@ img {
 
 .card-footer label {
     font-size: 10px;
+}
+
+/* IFRAME */
+.contacta{
+    height: 500px;
+    background-color: #1f2831;
+    padding: 2rem 0;
+}
+.contacta h1{
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(to right, #d000fa 5%, #0057da 50%, #e90410 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.contacta iframe{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 }
 
 /* CREAR */
@@ -1159,6 +1220,10 @@ textarea:hover {
         grid-column: 1/1;
         grid-row: 2/2;
     }
+    .redes-sociales{
+        grid-template-columns: 1/1;
+        grid-row: 3/3;
+    }
 
     .nombre {
         min-width: 95%;
@@ -1175,6 +1240,32 @@ textarea:hover {
         position: relative;
         color: rgb(31, 40, 49);
     }
+
+    .redes-sociales{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items:center;
+        padding-top: 2rem;
+    }
+    .redes-sociales h3 {
+        display: none;
+    }
+    
+    .image-with-shadow {
+        display: inline-block;
+        width: 3rem;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 50%;
+        
+    }
+    
+    .git a {
+        border-radius: 50%;
+        background-color: #b6b5b5;
+    } 
+    
 
     .certificacion {
         grid-template-columns: 1fr;
@@ -1285,20 +1376,21 @@ textarea:hover {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
     .titulo-testimoniales {
         grid-column: 1 / 4;
         grid-row: 1/1;
     }
-    
+
     .testimonial-card {
         border: 3px solid goldenrod;
     }
-    
+
     .card-header {
         display: flex;
         flex-direction: column;
     }
-    
+
     .card-imagen {
         flex-basis: 6rem;
         border-radius: 50%;
@@ -1306,49 +1398,52 @@ textarea:hover {
         overflow: hidden;
         border: 3px solid goldenrod;
     }
-    
+
     .card-imagen img {
         width: 100%;
         height: 100%;
     }
-    
+
     .card-testigo {
         width: 100%;
     }
-    
+
     .card-datos {
         display: grid;
         grid-template-rows: repeat(1, 30px);
         justify-content: center;
     }
-    
+
     .card-datos label {
         font-size: 1rem;
     }
-    .card-calificacion{
+
+    .card-calificacion {
         display: grid;
         grid-template-columns: repeat(5, 50px);
         grid-template-rows: 1fr 1fr;
         justify-content: center;
 
     }
+
     .card-calificacion i {
         font-size: 1rem;
     }
-    
+
     .card-body p {
         font-size: 15px;
     }
-    
+
     .card-footer {
         display: grid;
         grid-template-rows: repeat(4, 20px);
     }
-    
+
     .card-footer label {
         font-size: 12px;
     }
     
+
 }
 
 /* MEDIA PC */
