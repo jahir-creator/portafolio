@@ -529,131 +529,71 @@ img {
     background-clip: text;
 }
 
-.certificacion .html,
-.css,
-.js,
-.nodejs,
-.expressjs,
-.php,
-.laravel,
-.java,
-.springboot,
-.react,
-.mysql,
-.postgres,
-.oracle,
-.python,
-.manjaro,
-.debian,
-.windows {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-    border: 1px solid #fff;
-    width: 15rem;
-    height: 20rem;
-    margin-bottom: 1rem;
-    color: #0b0b0b;
-    background-color: aliceblue;
+.article {
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
 }
 
-
-.html:hover {
-    background-image: radial-gradient(circle, #E65100 90%, transparent 10%);
-    transition: background-size 2s;
+.article img {
+    height: 100%;
 }
 
-.css:hover {
-    background-image: radial-gradient(circle, #0277BD 90%, transparent 10%);
-    transition: background-size 2s;
+.article img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    transition: .3s ease; /* Agregamos transición para opacity */
 }
 
-.js:hover {
-    background-image: radial-gradient(circle, #FFD600 90%, transparent 10%);
-    transition: background-size 2s;
+.article img:last-child {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(100%);
+    transition: .3s ease;
+    opacity: 0;
 }
 
-.nodejs:hover {
-    background-image: radial-gradient(circle, #4CAF50 90%, transparent 10%);
-    transition: background-size 2s;
+.article:hover {
+    transform: perspective(250px) rotateX(20deg) translateY(-10%) translateZ(0);
 }
 
-.expressjs:hover {
-    background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
+.article:hover img:first-child {
+    opacity: 0.3;
 }
 
-.php:hover {
-    background-image: radial-gradient(circle, #B5C4E0 90%, transparent 10%);
-    transition: background-size 2s;
+.article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;
 }
 
-.laravel:hover {
-    background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
+.article:hover::before {
+    opacity: 1;
 }
 
-.java:hover {
-    background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
+.article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(0%);
 }
 
-.springboot:hover {
-    background-image: radial-gradient(circle, #26292C 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
+.slider{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 2rem;
 }
 
-.react:hover {
-    background-image: radial-gradient(circle, #B8B5FF 90%, transparent 10%);
-    transition: background-size 2s;
-}
-
-.mysql:hover {
-    background-image: radial-gradient(circle, #333333 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
-
-.postgres:hover {
-    background-image: radial-gradient(circle, #333333 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
-
-.oracle:hover {
-    background-image: radial-gradient(circle, #333333 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
-
-.python:hover {
-    background-image: radial-gradient(circle, #333333 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
-
-.manjaro:hover {
-    background-image: radial-gradient(circle, #34BE5B 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
-
-.debian:hover {
-    background-image: radial-gradient(circle, #333333 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
-
-.windows:hover {
-    background-image: radial-gradient(circle, #333333 90%, transparent 10%);
-    transition: background-size 2s;
-    color: #fff;
-}
 
 .certificacion img {
     width: 10rem;
@@ -1042,6 +982,7 @@ textarea:hover {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         justify-items: center;
+        margin-bottom: 2rem;
     }
 
     /* PROYECTOS */
@@ -1270,7 +1211,7 @@ textarea:hover {
     .certificacion {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        opacity: 0;
+        /* opacity: 0; */
         /* Configura la opacidad inicialmente a 0 */
         transition: opacity 0.3s ease-in-out;
 
@@ -1312,8 +1253,10 @@ textarea:hover {
 
     .slider {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 2rem;
         width: 80%;
+        height: auto;
     }
 
     /* PROYECTOS */
@@ -1471,6 +1414,10 @@ textarea:hover {
 
     .nombre {
         min-width: 75%;
+    }
+    /* TECNOLOGIAS */
+    .slider {
+        grid-template-columns: repeat(5, 1fr);
     }
 
     /* PROYECTOS */
